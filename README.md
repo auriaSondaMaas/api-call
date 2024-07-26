@@ -8,5 +8,21 @@ To install this project with docker:
 
 - Run the container 
 ```bash 
-    docker run -p 4567:4567 my_api_project
+    docker run eb-api
+```
+
+- To execute the test
+
+
+## Execution without docker
+- Execute the command
+
+```bash
+    ruby main.rb
+```
+
+- To execute the test run
+
+```bash
+    rspec spec/api_call_spec.rb
 ```

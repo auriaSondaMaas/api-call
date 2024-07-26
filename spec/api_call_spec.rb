@@ -8,8 +8,9 @@ RSpec.describe ApiCall do
   describe '#get' do
     it 'retrieves data from the given endpoint' do
       response = client.get('/properties')
-      expect(response).to be_an_instance_of(Array)
-      expect(response.first).to have_key('title')
+      expect(response).to have_key('content')
+      expect(response['content']).to be_an_instance_of(Array)
+      expect(response['content'].first).to have_key('title')
     end
   end
 end
